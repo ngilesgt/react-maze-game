@@ -26,8 +26,8 @@ class App extends Component {
   render() {
     return (
       <Canvas
-        x={this.props.x}
-        y={this.props.y}
+        mouseX={this.props.x}
+        mouseY={this.props.y}
         gameState={this.props.gameState}
         startGame={this.props.startGame}
         trackMouse={event => this.trackMouse(event)}

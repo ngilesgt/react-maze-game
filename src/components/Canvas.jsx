@@ -7,9 +7,11 @@ import StartGame from "./StartGame";
 import Title from "./Title";
 import Circle from "./Circle";
 import Box from "./Box";
+import TransparentLayer from "./TransparentLayer";
 
 const Canvas = props => {
   const gameHeight = 1200;
+
   const viewBox = [
     window.innerWidth / -2,
     100 - gameHeight,
@@ -31,12 +33,10 @@ const Canvas = props => {
       </defs>
 
       <Background />
-      <BottomBar />
-
-      <CurrentScore score={0} />
 
       {!props.gameState.started && (
         <g>
+          <TransparentLayer />
           <StartGame onClick={() => props.startGame()} />
           <Title />
         </g>
@@ -45,16 +45,20 @@ const Canvas = props => {
       {props.gameState.started && (
         <g>
           <Box />
-          <Circle x={props.x} y={props.y} />
+          <Circle xPos={props.mouseX} yPos={props.mouseY} />
         </g>
       )}
+
+      <BottomBar />
+
+      <CurrentScore score={0} />
     </svg>
   );
 };
 
 Canvas.propTypes = {
-  x: PropTypes.number.isRequired,
-  y: PropTypes.number.isRequired,
+  mouseX: PropTypes.number.isRequired,
+  mouseY: PropTypes.number.isRequired,
   gameState: PropTypes.shape({
     started: PropTypes.bool.isRequired,
     lives: PropTypes.number.isRequired

@@ -11,14 +11,14 @@ const Circle = props => {
 
   return (
     <g>
-      <circle cx={props.x} cy={props.y} r={25} style={style} />
+      <circle cx={props.xPos} cy={props.yPos} r={25} style={style} />
     </g>
   );
 };
 
 Circle.propTypes = {
-  x: PropTypes.number.isRequired,
-  y: PropTypes.number.isRequired
+  xPos: PropTypes.number.isRequired,
+  yPos: PropTypes.number.isRequired
 };
 
 export default Circle;
