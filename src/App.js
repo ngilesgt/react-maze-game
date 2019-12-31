@@ -6,12 +6,13 @@ import Canvas from "./components/Canvas";
 class App extends Component {
   componentDidMount() {
     const self = this;
+
     setInterval(() => {
       self.props.moveObjects(self.canvasMousePosition);
     }, 10);
 
     window.onresize = () => {
-      const cnv = document.getElementById("aliens-go-home-canvas");
+      const cnv = document.getElementById("maze-game-canvas");
       cnv.style.width = `${window.innerWidth}px`;
       cnv.style.height = `${window.innerHeight}px`;
     };
@@ -25,7 +26,6 @@ class App extends Component {
   render() {
     return (
       <Canvas
-        angle={this.props.angle}
         x={this.props.x}
         y={this.props.y}
         gameState={this.props.gameState}
@@ -37,7 +37,6 @@ class App extends Component {
 }
 
 App.propTypes = {
-  angle: PropTypes.number.isRequired,
   x: PropTypes.number.isRequired,
   y: PropTypes.number.isRequired,
   gameState: PropTypes.shape({

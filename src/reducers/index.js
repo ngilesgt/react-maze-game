@@ -11,7 +11,6 @@ const initialGameState = {
 };
 
 const initialState = {
-  angle: 45,
   x: -200,
   y: -100,
   gameState: initialGameState

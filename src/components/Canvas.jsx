@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Sky from "./Sky";
-import Ground from "./Ground";
+import Background from "./Background";
+import BottomBar from "./BottomBar";
 import CurrentScore from "./CurrentScore";
 import StartGame from "./StartGame";
 import Title from "./Title";
@@ -19,7 +19,7 @@ const Canvas = props => {
 
   return (
     <svg
-      id="aliens-go-home-canvas"
+      id="maze-game-canvas"
       preserveAspectRatio="xMaxYMax none"
       onMouseMove={props.trackMouse}
       viewBox={viewBox}
@@ -29,8 +29,9 @@ const Canvas = props => {
           <feDropShadow dx="1" dy="1" stdDeviation="2" />
         </filter>
       </defs>
-      <Sky />
-      <Ground />
+
+      <Background />
+      <BottomBar />
 
       <CurrentScore score={0} />
 
@@ -52,7 +53,6 @@ const Canvas = props => {
 };
 
 Canvas.propTypes = {
-  angle: PropTypes.number.isRequired,
   x: PropTypes.number.isRequired,
   y: PropTypes.number.isRequired,
   gameState: PropTypes.shape({

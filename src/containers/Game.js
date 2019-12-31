@@ -3,7 +3,6 @@ import App from "../App";
 import { moveObjects, startGame } from "../actions/index";
 
 const mapStateToProps = state => ({
-  angle: state.angle,
   x: state.x,
   y: state.y,
   gameState: state.gameState
