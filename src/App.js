@@ -41,18 +41,8 @@ App.propTypes = {
   y: PropTypes.number.isRequired,
   gameState: PropTypes.shape({
     started: PropTypes.bool.isRequired,
-    kills: PropTypes.number.isRequired,
     lives: PropTypes.number.isRequired
   }).isRequired,
-  flyingObjects: PropTypes.arrayOf(
-    PropTypes.shape({
-      position: PropTypes.shape({
-        x: PropTypes.number.isRequired,
-        y: PropTypes.number.isRequired
-      }).isRequired,
-      id: PropTypes.number.isRequired
-    })
-  ).isRequired,
   moveObjects: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired
 };

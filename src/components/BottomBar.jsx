@@ -2,7 +2,7 @@ import React from "react";
 import { bigWidth } from "../utils/constants";
 
 const BottomBar = () => {
-  const groundStyle = {
+  const bottomBarStyle = {
     fill: "#CFB53B"
   };
 
@@ -12,11 +12,11 @@ const BottomBar = () => {
   };
 
   return (
-    <g id="ground">
+    <g id="bottom">
       <rect
-        id="ground-2"
-        data-name="ground"
-        style={groundStyle}
+        id="bottom-2"
+        data-name="bottom"
+        style={bottomBarStyle}
         x={bigWidth / -2}
         y={0}
         width={bigWidth}

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Circle = props => {
   const style = {
     fill: "#ffffff",
-    stroke: "#666",
+    stroke: "#665",
     strokeWidth: "2px",
     cursor: "none"
   };
