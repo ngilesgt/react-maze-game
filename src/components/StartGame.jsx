@@ -5,7 +5,7 @@ import { gameWidth } from "../utils/constants";
 const StartGame = props => {
   const button = {
     x: gameWidth / -2, // half width
-    y: -280, // minus means up (above 0)
+    y: -680, // minus means up (above 0)
     width: gameWidth,
     height: 200,
     rx: 10, // border radius
@@ -20,19 +20,20 @@ const StartGame = props => {
   const text = {
     textAnchor: "middle", // center
     x: 0, // center relative to X axis
-    y: -150, // 150 up
+    y: -550, // 550 up
     style: {
-      fontFamily: '"Joti One", cursive',
+      fontFamily: "Play",
       fontSize: 60,
-      fill: "#e3e3e3",
+      fill: "#CFB53B",
       cursor: "pointer"
     },
     onClick: props.onClick
   };
+
   return (
     <g filter="url(#shadow)">
       <rect {...button} />
-      <text {...text}>Tap To Start!</text>
+      <text {...text}>Tap To Play</text>
     </g>
   );
 };

@@ -1,64 +1,30 @@
 import React from "react";
-import { pathFromBezierCurve } from "../utils/formulas";
+import { gameWidth } from "../utils/constants";
 
 const Title = () => {
   const textStyle = {
-    fontFamily: '"Joti One", cursive',
-    fontSize: 120,
-    fill: "#cbca62"
+    textAnchor: "middle", // center
+    fontFamily: "Play",
+    fontSize: 100,
+    fill: "#CFB53B",
+    x: 0, // center relative to X axis
+    y: -1000,
+    width: gameWidth
   };
 
-  const aliensLineCurve = {
-    initialAxis: {
-      x: -190,
-      y: -950
-    },
-    initialControlPoint: {
-      x: 95,
-      y: -50
-    },
-    endingControlPoint: {
-      x: 285,
-      y: -50
-    },
-    endingAxis: {
-      x: 380,
-      y: 0
-    }
-  };
-
-  const goHomeLineCurve = {
-    ...aliensLineCurve,
-    initialAxis: {
-      x: -250,
-      y: -780
-    },
-    initialControlPoint: {
-      x: 125,
-      y: -90
-    },
-    endingControlPoint: {
-      x: 375,
-      y: -90
-    },
-    endingAxis: {
-      x: 500,
-      y: 0
-    }
+  const textStyle2 = {
+    textAnchor: "middle", // center
+    fontFamily: "Play",
+    fontSize: 100,
+    fill: "#CFB53B",
+    x: 0, // center relative to X axis
+    y: -900
   };
 
   return (
     <g filter="url(#shadow)">
-      <defs>
-        <path id="AliensPath" d={pathFromBezierCurve(aliensLineCurve)} />
-        <path id="GoHomePath" d={pathFromBezierCurve(goHomeLineCurve)} />
-      </defs>
-      <text {...textStyle}>
-        <textPath xlinkHref="#AliensPath">Aliens,</textPath>
-      </text>
-      <text {...textStyle}>
-        <textPath xlinkHref="#GoHomePath">Go Home!</textPath>
-      </text>
+      <text {...textStyle}>Amazing</text>
+      <text {...textStyle2}>Maze Game</text>
     </g>
   );
 };

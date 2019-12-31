@@ -3,11 +3,11 @@ import { skyAndGroundWidth } from "../utils/constants";
 
 const Ground = () => {
   const groundStyle = {
-    fill: "#59a941"
+    fill: "#CFB53B"
   };
 
   const division = {
-    stroke: "#458232",
+    stroke: "3D3232",
     strokeWidth: "3px"
   };
 
