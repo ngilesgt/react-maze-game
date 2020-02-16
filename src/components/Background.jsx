@@ -3,8 +3,8 @@ import { bigWidth } from "../utils/constants";
 
 const Background = () => {
   const backgroundStyle = {
-    fill: "#111010",
-    cursor: "none"
+    fill: "#111010"
+    // cursor: "none" TODO
   };
 
   const gameHeight = 1200;

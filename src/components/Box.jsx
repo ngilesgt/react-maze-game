@@ -4,8 +4,8 @@ const Box = () => {
   const boxStyle = {
     stroke: "white",
     strokeWidth: "5",
-    fill: "transparent",
-    cursor: "none"
+    fill: "transparent"
+    // cursor: "none" TODO
   };
 
   return <rect style={boxStyle} x={-250} y={-800} width={500} height={500} />;

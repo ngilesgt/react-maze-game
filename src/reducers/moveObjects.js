@@ -9,7 +9,9 @@ function moveObjects(state, action) {
   return {
     ...state,
     gameState: {
-      ...state.gameState
+      ...state.gameState,
+      playerX: state.gameState.playerX,
+      playerY: state.gameState.playerY
     },
     x,
     y

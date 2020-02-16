@@ -4,7 +4,9 @@ import startGame from "./startGame";
 
 const initialGameState = {
   started: false,
-  lives: 3
+  lives: 3,
+  playerX: -500,
+  playerY: -550
 };
 
 const initialState = {

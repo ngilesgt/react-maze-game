@@ -7,6 +7,7 @@ import StartGame from "./StartGame";
 import Title from "./Title";
 import Circle from "./Circle";
 import Box from "./Box";
+import Player from "./Player";
 import TransparentLayer from "./TransparentLayer";
 
 const Canvas = props => {
@@ -46,6 +47,10 @@ const Canvas = props => {
         <g>
           <Box />
           <Circle xPos={props.mouseX} yPos={props.mouseY} />
+          <Player
+            playerX={props.gameState.playerX}
+            playerY={props.gameState.playerY}
+          />
         </g>
       )}
 
@@ -61,7 +66,9 @@ Canvas.propTypes = {
   mouseY: PropTypes.number.isRequired,
   gameState: PropTypes.shape({
     started: PropTypes.bool.isRequired,
-    lives: PropTypes.number.isRequired
+    lives: PropTypes.number.isRequired,
+    playerX: PropTypes.number.isRequired,
+    playerY: PropTypes.number.isRequired
   }).isRequired,
   trackMouse: PropTypes.func.isRequired,
   startGame: PropTypes.func.isRequired
